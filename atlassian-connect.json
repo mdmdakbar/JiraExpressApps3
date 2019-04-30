@@ -1,0 +1,41 @@
+{
+    "key": "com.azure.devops.integration.jira",
+    "name": "Azure pipelines DevTest1",
+    "description": "Jira integration with Azure pipelines",
+    "vendor": {
+        "name": "AzureDevOps",
+        "url": "https://www.atlassian.com/angrynerds"
+    },
+    "baseUrl": "https://3f3e1a64.ngrok.io",
+    "authentication": {
+        "type": "jwt"
+    },
+    "lifecycle": {
+        "installed": "/event",
+        "uninstalled": "/event"
+    },
+    "scopes": [
+        "READ",
+        "WRITE",
+        "DELETE"
+    ],
+    "modules": {
+        "jiraDeploymentInfoProvider": {
+            "homeUrl": "https://mydeploymentrovider.com",
+            "logoUrl": "https://mydeploymentprovider.com/images/logo.svg",
+            "documentationUrl": "https://mydeploymentprovider.com/docs/jira-integration",
+            "name": {
+              "value": "Azure pipelines"
+            },
+            "key": "deployment-integration-azure-pipelines"
+          },
+          "postInstallPage": {
+            "url": "/postInstallPage",
+            "name": {
+              "value": "My Post-Install Page",
+              "i18n": "mypostinstallpage.name"
+            },
+            "key": "my-post-install-page"
+          }
+    }
+}
