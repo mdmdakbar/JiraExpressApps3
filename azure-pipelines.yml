@@ -6,16 +6,9 @@
 trigger:
 - master
 
-pool:
-  vmImage: 'ubuntu-latest'
-
+pool: server
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
+- task: Delay@1
+  displayName: 'Delay by 0 minutes'
 
-- script: |
-    npm install
-    npm run build
-  displayName: 'npm install and build'
+
